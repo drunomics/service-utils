@@ -1,0 +1,23 @@
+{
+  "name": "drunomics/service-utils",
+  "description": "Provides setter injection traits in order to ease dependency injection of services.",
+  "keywords": ["drupal", "dependency-injection"],
+  "homepage": "https://github.com/drunomics/service-utils",
+  "type": "library",
+  "license": "GPL-2.0+",
+  "authors": [
+    {
+      "name": "drunomics GmbH",
+      "email": "hello@drunomics.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": { "drunomics\\ServiceUtils\\": "src/" }
+  },
+  "require": {
+    "drupal/core": "8.2.*"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "~4.8"
+  }
+}
