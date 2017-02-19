@@ -33,6 +33,6 @@ before_script:
 
 script:
   # Run the PHPUnit tests.
-  - ./vendor/bin/phpunit -c ./core/phpunit.xml.dist
+  - ./vendor/bin/phpunit
   # @todo: Check for coding standards violations
   # - ~/.composer/vendor/bin/phpcs
