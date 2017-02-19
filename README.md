@@ -1,6 +1,6 @@
 # Service Utils
-(c) 2017 drunomics GmbH
 [![Build Status](https://api.travis-ci.org/drunomics/service-utils.svg?branch=2.x)](https://travis-ci.org/drunomics/service-utils)
+(c) 2017 drunomics GmbH
 
 Provides setter injection traits in order to ease dependency injection of
 services.
@@ -14,13 +14,14 @@ Major version numbers match Drupal 8 core compatibility, e.g.
  
 ## Scope
 
-This covers traits for services which are missing from core or contrib modules.
+This covers traits for services that are missing from core or contrib modules.
 
 ## Usage
 
  - Install the package via `composer require drunomics/service-utils`
 
- - Just "use" the trait for the service you
+ - Just "use" the trait for the service you want to use. The trait provides a 
+   suiting getter; e.g., `getEntityTypeManager()`.
  
 ## Adding a missing trait
 
@@ -61,19 +62,19 @@ code beautifier:
    This would be the best option, but results in a worse developer experience
    (DX) while patches are not committed. The goal of this package is to make
    dependency injection almost as quick as calling out to \Drupal::container(),
-   thus adding in a patch every time a dependency is needed is considered too
-   much overhead.
+   thus adding in a patch every time a dependency is needed is taking too long
+   and so results in a worse DX.
 
    The suggested workflow is to quickly add missing traits to this package, so
    they are immediately available for everyone's use. On a regular basis,
    patches for traits should be filed against upstream projects in order to
    improve them and deprecate this package in the long term. Once those patches
-   landed in new upstream releases, the package can be safely dropped from a
-   project.
+   landed in new upstream releases, the service-utils usages could be replaced
+   and the package can be safely dropped from a project.
    
  - Why are there no stable releases?
  
-   Because every commit can be consider a new stable version. It's generally
+   Because every commit can be considered a new stable version. It's generally
    fine to always get the latest version, as every trait works independent on
    its own and won't be touched again once added.
    Given this library contains only simple, tested traits it's simple to avoid
