@@ -36,9 +36,22 @@ This covers traits for services which are missing from core or contrib modules.
 ## Running tests
  - Just clone the project and run the following commands from the project
    directory:
-   
-       composer install
-       ./vendor/bin/phpunit
+```
+   composer install
+   ./vendor/bin/phpunit # or use the shortcut
+   composer test
+```
+
+## Coding style
+
+To check the coding style for the project's custom code, run PHP code sniffer:
+    
+    composer cs
+    
+To automatically fix the coding style errors (as far as possible), run the PHP
+code beautifier:
+
+    composer cbf
 
 ## FAQ
 

@@ -32,7 +32,6 @@ before_script:
   - composer install
 
 script:
-  # Run the PHPUnit tests.
+  # Run the PHPUnit tests and code style checks.
   - ./vendor/bin/phpunit
-  # @todo: Check for coding standards violations
-  # - ~/.composer/vendor/bin/phpcs
+  - composer cs

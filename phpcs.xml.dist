@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ruleset name="d8_module">
+
+  <description>Coding Style for a Drupal 8 module.</description>
+
+  <file>./src</file>
+  <file>./tests</file>
+
+  <arg name="extensions" value="inc,install,module,php,profile,test,theme"/>
+  <arg value="s"/>
+
+  <!-- We always want short array syntax only. -->
+  <rule ref="Generic.Arrays.DisallowLongArraySyntax" />
+
+</ruleset>
