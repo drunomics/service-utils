@@ -1,6 +1,6 @@
 # Service Utils
 (c) 2017 drunomics GmbH
-[![Build Status](https://travis-ci.org/drunomics/service-utils.svg?branch=2.x)](https://travis-ci.org/drunomics/service-utils)
+[![Build Status](https://api.travis-ci.org/drunomics/service-utils.svg?branch=2.x)](https://travis-ci.org/drunomics/service-utils)
 
 Provides setter injection traits in order to ease dependency injection of
 services.
