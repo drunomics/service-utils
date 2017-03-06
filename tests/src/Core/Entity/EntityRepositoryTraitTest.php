@@ -2,46 +2,46 @@
 
 namespace drunomics\ServiceUtils\Tests\Core\Entity;
 
-use drunomics\ServiceUtils\Core\Entity\EntityRepositoryTrait;
+use drunomics\ServiceUtils\Core\Entity\EntityTypeManagerTrait;
 use Drupal\Core\DependencyInjection\Container;
-use Drupal\Core\Entity\EntityRepositoryInterface;
+use Drupal\Core\Entity\EntityTypeManagerInterface;
 
 /**
- * @coversDefaultClass \drunomics\ServiceUtils\Entity\EntityRepository
+ * @coversDefaultClass \drunomics\ServiceUtils\Entity\EntityTypeManager
  * @group ServiceUtils
  */
-class EntityRepositoryTraitTest extends \PHPUnit_Framework_TestCase {
+class EntityTypeManagerTraitTest extends \PHPUnit_Framework_TestCase {
 
-  use EntityRepositoryTrait;
+  use EntityTypeManagerTrait;
 
   /**
    * The id of the trait's service.
    *
    * @var string
    */
-  protected $serviceId = 'entity.repository';
+  protected $serviceId = 'entity_type.manager';
 
   /**
-   * @covers ::getEntityRepository
+   * @covers ::getEntityTypeManager
    */
   public function testGetter() {
     // Verify the container is used once and the right service is returned.
     $service = $this->mockContainerWithFakeService(['calls' => 1]);
-    $this->assertsame($service, $this->getEntityRepository());
+    $this->assertsame($service, $this->getEntityTypeManager());
     // Multiple calls should fetch the service from the container only once.
-    $this->getEntityRepository();
+    $this->getEntityTypeManager();
   }
 
   /**
-   * @covers ::setEntityRepository
+   * @covers ::setEntityTypeManager
    */
   public function testSetter() {
     // Verify the set service is returned.
     $this->mockContainerWithFakeService(['calls' => 0]);
-    $service = $this->prophesize(EntityRepositoryInterface::class)
+    $service = $this->prophesize(EntityTypeManagerInterface::class)
       ->reveal();
-    $this->setEntityRepository($service);
-    $this->assertsame($service, $this->getEntityRepository());
+    $this->setEntityTypeManager($service);
+    $this->assertsame($service, $this->getEntityTypeManager());
   }
 
   /**
