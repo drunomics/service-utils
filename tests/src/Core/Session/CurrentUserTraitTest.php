@@ -8,7 +8,7 @@ use Drupal\Core\Session\AccountProxyInterface;
 use Drupal\Core\Session\CurrentUserInterface;
 
 /**
- * @coversDefaultClass \drunomics\ServiceUtils\Core\Session\CurrentUser
+ * @coversDefaultClass \drunomics\ServiceUtils\Core\Session\CurrentUserTrait
  * @group ServiceUtils
  */
 class CurrentUserTraitTest extends \PHPUnit_Framework_TestCase {

@@ -1,47 +1,48 @@
 <?php
 
-namespace drunomics\ServiceUtils\Tests\Core\Entity;
+namespace drunomics\ServiceUtils\Tests\Core\State;
 
-use drunomics\ServiceUtils\Core\Entity\EntityTypeManagerTrait;
+use drunomics\ServiceUtils\Core\State\StateTrait;
 use Drupal\Core\DependencyInjection\Container;
-use Drupal\Core\Entity\EntityTypeManagerInterface;
+use Drupal\Core\State\AccountProxyInterface;
+use Drupal\Core\State\StateInterface;
 
 /**
- * @coversDefaultClass \drunomics\ServiceUtils\Core\Entity\EntityTypeManagerTrait
+ * @coversDefaultClass \drunomics\ServiceUtils\Core\State\StateTrait
  * @group ServiceUtils
  */
-class EntityTypeManagerTraitTest extends \PHPUnit_Framework_TestCase {
+class StateTraitTest extends \PHPUnit_Framework_TestCase {
 
-  use EntityTypeManagerTrait;
+  use StateTrait;
 
   /**
    * The id of the trait's service.
    *
    * @var string
    */
-  protected $serviceId = 'entity_type.manager';
+  protected $serviceId = 'state';
 
   /**
-   * @covers ::getEntityTypeManager
+   * @covers ::getState
    */
   public function testGetter() {
     // Verify the container is used once and the right service is returned.
     $service = $this->mockContainerWithFakeService(['calls' => 1]);
-    $this->assertsame($service, $this->getEntityTypeManager());
+    $this->assertsame($service, $this->getState());
     // Multiple calls should fetch the service from the container only once.
-    $this->getEntityTypeManager();
+    $this->getState();
   }
 
   /**
-   * @covers ::setEntityTypeManager
+   * @covers ::setState
    */
   public function testSetter() {
     // Verify the set service is returned.
     $this->mockContainerWithFakeService(['calls' => 0]);
-    $service = $this->prophesize(EntityTypeManagerInterface::class)
+    $service = $this->prophesize(StateInterface::class)
       ->reveal();
-    $this->setEntityTypeManager($service);
-    $this->assertsame($service, $this->getEntityTypeManager());
+    $this->setState($service);
+    $this->assertsame($service, $this->getState());
   }
 
   /**

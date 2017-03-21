@@ -7,7 +7,7 @@ use Drupal\Core\DependencyInjection\Container;
 use Drupal\Core\Entity\EntityRepositoryInterface;
 
 /**
- * @coversDefaultClass \drunomics\ServiceUtils\Entity\EntityRepository
+ * @coversDefaultClass \drunomics\ServiceUtils\Core\Entity\EntityRepositoryTrait
  * @group ServiceUtils
  */
 class EntityRepositoryTraitTest extends \PHPUnit_Framework_TestCase {
