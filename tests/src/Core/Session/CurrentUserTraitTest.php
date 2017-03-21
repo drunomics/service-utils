@@ -5,7 +5,6 @@ namespace drunomics\ServiceUtils\Tests\Core\Session;
 use drunomics\ServiceUtils\Core\Session\CurrentUserTrait;
 use Drupal\Core\DependencyInjection\Container;
 use Drupal\Core\Session\AccountProxyInterface;
-use Drupal\Core\Session\CurrentUserInterface;
 
 /**
  * @coversDefaultClass \drunomics\ServiceUtils\Core\Session\CurrentUserTrait

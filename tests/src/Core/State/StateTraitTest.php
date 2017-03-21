@@ -4,7 +4,6 @@ namespace drunomics\ServiceUtils\Tests\Core\State;
 
 use drunomics\ServiceUtils\Core\State\StateTrait;
 use Drupal\Core\DependencyInjection\Container;
-use Drupal\Core\State\AccountProxyInterface;
 use Drupal\Core\State\StateInterface;
 
 /**
