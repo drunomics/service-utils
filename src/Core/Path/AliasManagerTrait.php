@@ -32,7 +32,7 @@ trait AliasManagerTrait {
   /**
    * Gets the entity repository.
    *
-   * @return \Drupal\Core\Path\AliasManagerInterface $aliasManager
+   * @return \Drupal\Core\Path\AliasManagerInterface
    *   The alias manager.
    */
   public function getAliasManager() {
