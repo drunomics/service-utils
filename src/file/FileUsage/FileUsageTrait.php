@@ -10,17 +10,17 @@ use Drupal\file\FileUsage\FileUsageInterface;
 trait FileUsageTrait {
 
   /**
-   * The database file usage.
+   * File usage service.
    *
    * @var \Drupal\file\FileUsage\FileUsageInterface
    */
   protected $fileUsage;
 
   /**
-   * Sets the database file usage.
+   * Sets file usage service.
    *
    * @param \Drupal\file\FileUsage\FileUsageInterface $file_usage
-   *   The database file usage.
+   *   File usage service.
    *
    * @return $this
    */
@@ -30,10 +30,10 @@ trait FileUsageTrait {
   }
 
   /**
-   * Gets the database file usage.
+   * Gets file usage service.
    *
    * @return \Drupal\file\FileUsage\FileUsageInterface
-   *   The database file usage.
+   *   File usage service.
    */
   public function getFileUsage() {
     if (empty($this->fileUsage)) {
