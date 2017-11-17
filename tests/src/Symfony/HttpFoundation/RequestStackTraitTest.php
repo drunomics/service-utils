@@ -38,7 +38,8 @@ class RequestStackTraitTest extends \PHPUnit_Framework_TestCase {
   public function testSetter() {
     // Verify the set service is returned.
     $this->mockContainerWithFakeService(['calls' => 0]);
-    $service = $this->prophesize(RequestStack::class)
+    $service = $this->prophesize()
+      ->willExtend(RequestStack::class)
       ->reveal();
     $this->setRequestStack($service);
     $this->assertsame($service, $this->getRequestStack());

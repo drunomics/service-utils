@@ -38,7 +38,8 @@ class EntityRepositoryTraitTest extends \PHPUnit_Framework_TestCase {
   public function testSetter() {
     // Verify the set service is returned.
     $this->mockContainerWithFakeService(['calls' => 0]);
-    $service = $this->prophesize(EntityRepositoryInterface::class)
+    $service = $this->prophesize()
+      ->willImplement(EntityRepositoryInterface::class)
       ->reveal();
     $this->setEntityRepository($service);
     $this->assertsame($service, $this->getEntityRepository());

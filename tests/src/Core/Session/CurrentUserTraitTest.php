@@ -38,7 +38,8 @@ class CurrentUserTraitTest extends \PHPUnit_Framework_TestCase {
   public function testSetter() {
     // Verify the set service is returned.
     $this->mockContainerWithFakeService(['calls' => 0]);
-    $service = $this->prophesize(AccountProxyInterface::class)
+    $service = $this->prophesize()
+      ->willImplement(AccountProxyInterface::class)
       ->reveal();
     $this->setCurrentUser($service);
     $this->assertsame($service, $this->getCurrentUser());

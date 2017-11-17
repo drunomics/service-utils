@@ -38,7 +38,8 @@ class EntityTypeManagerTraitTest extends \PHPUnit_Framework_TestCase {
   public function testSetter() {
     // Verify the set service is returned.
     $this->mockContainerWithFakeService(['calls' => 0]);
-    $service = $this->prophesize(EntityTypeManagerInterface::class)
+    $service = $this->prophesize()
+      ->willImplement(EntityTypeManagerInterface::class)
       ->reveal();
     $this->setEntityTypeManager($service);
     $this->assertsame($service, $this->getEntityTypeManager());

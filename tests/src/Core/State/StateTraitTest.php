@@ -38,7 +38,8 @@ class StateTraitTest extends \PHPUnit_Framework_TestCase {
   public function testSetter() {
     // Verify the set service is returned.
     $this->mockContainerWithFakeService(['calls' => 0]);
-    $service = $this->prophesize(StateInterface::class)
+    $service = $this->prophesize()
+      ->willImplement(StateInterface::class)
       ->reveal();
     $this->setState($service);
     $this->assertsame($service, $this->getState());
