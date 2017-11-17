@@ -38,7 +38,8 @@ class FileUsageTraitTest extends \PHPUnit_Framework_TestCase {
   public function testSetter() {
     // Verify the set service is returned.
     $this->mockContainerWithFakeService(['calls' => 0]);
-    $service = $this->prophesize(FileUsageInterface::class)
+    $service = $this->prophesize()
+      ->willImplement(FileUsageInterface::class)
       ->reveal();
     $this->setFileUsage($service);
     $this->assertsame($service, $this->getFileUsage());
