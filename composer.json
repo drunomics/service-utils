@@ -25,5 +25,10 @@
     "cs": "phpcs --colors",
     "cbf": "phpcbf",
     "test": "phpunit"
+  },
+  "config": {
+    "platform": {
+      "php": "7.0.8"
+    }
   }
 }
