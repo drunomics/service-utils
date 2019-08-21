@@ -1,6 +1,6 @@
 <?php
 
-namespace drunomics\ServiceUtils\Core\Entity;
+namespace drunomics\ServiceUtils\Core\Plugin;
 
 use Drupal\Core\Block\BlockManagerInterface;
 
