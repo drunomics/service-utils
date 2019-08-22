@@ -2,7 +2,7 @@
 
 namespace drunomics\ServiceUtils\Core\Plugin;
 
-use Drupal\Core\Block\BlockManager;
+use Drupal\Core\Block\BlockManagerInterface;
 
 /**
  * Allows setter injection and simple usage of the service.
@@ -19,12 +19,12 @@ trait BlockManagerTrait {
   /**
    * Sets the block manager.
    *
-   * @param \Drupal\Core\Block\BlockManager $blockManager
+   * @param \Drupal\Core\Block\BlockManagerInterface $blockManager
    *   The block manager.
    *
    * @return $this
    */
-  public function setBlockManager(BlockManager $blockManager) {
+  public function setBlockManager(BlockManagerInterface $blockManager) {
     $this->blockManager = $blockManager;
     return $this;
   }
@@ -32,7 +32,7 @@ trait BlockManagerTrait {
   /**
    * Gets the plugin block manager.
    *
-   * @return \Drupal\Core\Block\BlockManager
+   * @return \Drupal\Core\Block\BlockManagerInterface
    *   The block manager.
    */
   public function getBlockManager() {
