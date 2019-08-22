@@ -3,7 +3,7 @@
 namespace drunomics\ServiceUtils\Tests\Core\Entity;
 
 use drunomics\ServiceUtils\Core\Plugin\BlockManagerTrait;
-use Drupal\Core\Block\BlockManagerInterface;
+use Drupal\Core\Block\BlockManager;
 use Drupal\Core\DependencyInjection\Container;
 
 /**
@@ -39,7 +39,7 @@ class BlockManagerTraitTest extends \PHPUnit_Framework_TestCase {
     // Verify the set service is returned.
     $this->mockContainerWithFakeService(['calls' => 0]);
     $service = $this->prophesize()
-      ->willImplement(BlockManagerInterface::class)
+      ->willImplement(BlockManager::class)
       ->reveal();
     $this->setBlockManager($service);
     $this->assertsame($service, $this->getBlockManager());
