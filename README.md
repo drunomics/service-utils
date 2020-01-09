@@ -1,6 +1,6 @@
 # Service Utils
 [![Build Status](https://api.travis-ci.org/drunomics/service-utils.svg?branch=2.x)](https://travis-ci.org/drunomics/service-utils)
-(c) 2017-2019 drunomics GmbH
+(c) 2017-2020 drunomics GmbH
 
 Provides setter injection traits in order to ease dependency injection of
 services.
@@ -15,6 +15,7 @@ Major version numbers match Drupal 8 core compatibility, e.g.
      5.x -> Drupal 8.5.x
      6.x -> Drupal 8.6.x
      7.x -> Drupal 8.7.x
+     8.x -> Drupal 8.8.x
 
 ## Scope
 
