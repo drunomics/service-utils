@@ -10,7 +10,7 @@ use Drupal\Core\Entity\EntityTypeManagerInterface;
  * @coversDefaultClass \drunomics\ServiceUtils\Core\Entity\EntityTypeManagerTrait
  * @group ServiceUtils
  */
-class EntityTypeManagerTraitTest extends \PHPUnit_Framework_TestCase {
+class EntityRepositoryTraitTest extends \PHPUnit_Framework_TestCase {
 
   use EntityTypeManagerTrait;
 
