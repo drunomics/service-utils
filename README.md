@@ -16,6 +16,7 @@ Major version numbers match Drupal 8 core compatibility, e.g.
      6.x -> Drupal 8.6.x
      7.x -> Drupal 8.7.x
      8.x -> Drupal 8.8.x
+     9.x -> Drupal 8.9.x
 
 ## Scope
 
