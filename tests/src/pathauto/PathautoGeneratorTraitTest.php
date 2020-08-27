@@ -1,18 +1,26 @@
 <?php
 
-namespace drunomics\ServiceUtils\Tests\Core\Path;
+namespace drunomics\ServiceUtils\Tests\pathauto;
 
-use drunomics\ServiceUtils\Core\Path\PathautoGeneratorTrait;
+use drunomics\ServiceUtils\pathauto\PathautoGeneratorTrait;
 use Drupal\Core\DependencyInjection\Container;
 use Drupal\pathauto\PathautoGeneratorInterface;
 
 /**
- * @coversDefaultClass \drunomics\ServiceUtils\Core\Path\PathautoGeneratorTrait
+ * @coversDefaultClass \drunomics\ServiceUtils\pathauto\PathautoGeneratorTrait
  * @group ServiceUtils
  */
 class PathautoGeneratorTraitTest extends \PHPUnit_Framework_TestCase {
 
   use PathautoGeneratorTrait;
+
+  /**
+   * {@inheritdoc}
+   */
+  protected function setUp() {
+    parent::setUp();
+    \Drupal::service('module_installer')->install(['pathauto']);
+  }
 
   /**
    * The id of the trait's service.
