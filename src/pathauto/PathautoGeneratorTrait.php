@@ -1,6 +1,6 @@
 <?php
 
-namespace drunomics\ServiceUtils\Core\Path;
+namespace drunomics\ServiceUtils\pathauto;
 
 use Drupal\pathauto\PathautoGeneratorInterface;
 

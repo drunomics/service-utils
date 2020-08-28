@@ -19,7 +19,14 @@
   },
   "require-dev": {
     "phpunit/phpunit": "~4.8",
+    "drupal/pathauto": "^1.6",
     "drupal/coder": "^8.2"
+  },
+  "repositories": {
+    "0": {
+      "type": "composer",
+      "url": "https://packages.drupal.org/8"
+    }
   },
   "scripts": {
     "cs": "phpcs --colors",
