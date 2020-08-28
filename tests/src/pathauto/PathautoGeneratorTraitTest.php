@@ -15,14 +15,6 @@ class PathautoGeneratorTraitTest extends \PHPUnit_Framework_TestCase {
   use PathautoGeneratorTrait;
 
   /**
-   * {@inheritdoc}
-   */
-  protected function setUp() {
-    parent::setUp();
-    \Drupal::service('module_installer')->install(['pathauto']);
-  }
-
-  /**
    * The id of the trait's service.
    *
    * @var string
