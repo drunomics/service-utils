@@ -28,7 +28,7 @@ before_script:
 
   # Remember the current rules test directory for later use in the Drupal
   # installation.
-  - composer install
+  - composer install --no-interaction
 
 script:
   # Run the PHPUnit tests and code style checks.
