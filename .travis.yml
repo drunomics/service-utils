@@ -28,7 +28,7 @@ before_script:
 
   # Remember the current rules test directory for later use in the Drupal
   # installation.
-  - composer install --no-interaction
+  - travis_wait 30 composer install --no-interaction --ignore-platform-reqs
 
 script:
   # Run the PHPUnit tests and code style checks.
