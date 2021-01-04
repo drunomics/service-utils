@@ -5,14 +5,17 @@ namespace drunomics\ServiceUtils\Tests\Core\Entity;
 use drunomics\ServiceUtils\Core\Plugin\BlockManagerTrait;
 use Drupal\Core\Block\BlockManagerInterface;
 use Drupal\Core\DependencyInjection\Container;
+use PHPUnit\Framework\TestCase;
+use Prophecy\PhpUnit\ProphecyTrait;
 
 /**
  * @coversDefaultClass \drunomics\ServiceUtils\Core\Entity\EntityTypeManagerTrait
  * @group ServiceUtils
  */
-class BlockManagerTraitTest extends \PHPUnit_Framework_TestCase {
+class BlockManagerTraitTest extends TestCase {
 
   use BlockManagerTrait;
+  use ProphecyTrait;
 
   /**
    * The id of the trait's service.

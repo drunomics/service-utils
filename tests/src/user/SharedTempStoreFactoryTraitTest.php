@@ -4,15 +4,18 @@ namespace drunomics\ServiceUtils\Tests\user;
 
 use drunomics\ServiceUtils\user\SharedTempStoreFactoryTrait;
 use Drupal\Core\DependencyInjection\Container;
-use Drupal\user\SharedTempStoreFactory;
+use Drupal\Core\TempStore\SharedTempStoreFactory;
+use PHPUnit\Framework\TestCase;
+use Prophecy\PhpUnit\ProphecyTrait;
 
 /**
  * @coversDefaultClass \drunomics\ServiceUtils\user\SharedTempStoreFactoryTrait
  * @group ServiceUtils
  */
-class SharedTempStoreFactoryTraitTest extends \PHPUnit_Framework_TestCase {
+class SharedTempStoreFactoryTraitTest extends TestCase {
 
   use SharedTempStoreFactoryTrait;
+  use ProphecyTrait;
 
   /**
    * The id of the trait's service.

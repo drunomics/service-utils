@@ -6,6 +6,7 @@ use PHPUnit\Framework\TestCase;
 use drunomics\ServiceUtils\Core\Config\ConfigFactoryTrait;
 use Drupal\Core\DependencyInjection\Container;
 use Drupal\Core\Config\ConfigFactoryInterface;
+use Prophecy\PhpUnit\ProphecyTrait;
 
 /**
  * @coversDefaultClass \drunomics\ServiceUtils\Core\Config\ConfigFactoryTrait
@@ -14,6 +15,7 @@ use Drupal\Core\Config\ConfigFactoryInterface;
 class ConfigFactoryTraitTest extends TestCase {
 
   use ConfigFactoryTrait;
+  use ProphecyTrait;
 
   /**
    * The id of the trait's service.
