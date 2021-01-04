@@ -5,14 +5,17 @@ namespace drunomics\ServiceUtils\Tests\Core\Entity;
 use drunomics\ServiceUtils\Core\Entity\EntityTypeManagerTrait;
 use Drupal\Core\DependencyInjection\Container;
 use Drupal\Core\Entity\EntityTypeManagerInterface;
+use PHPUnit\Framework\TestCase;
+use Prophecy\PhpUnit\ProphecyTrait;
 
 /**
  * @coversDefaultClass \drunomics\ServiceUtils\Core\Entity\EntityTypeManagerTrait
  * @group ServiceUtils
  */
-class EntityRepositoryTraitTest extends \PHPUnit_Framework_TestCase {
+class EntityRepositoryTraitTest extends TestCase {
 
   use EntityTypeManagerTrait;
+  use ProphecyTrait;
 
   /**
    * The id of the trait's service.

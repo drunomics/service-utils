@@ -2,7 +2,7 @@
 
 namespace drunomics\ServiceUtils\user;
 
-use Drupal\user\SharedTempStoreFactory;
+use Drupal\Core\TempStore\SharedTempStoreFactory;
 
 /**
  * Allows setter injection and simple usage of the service.

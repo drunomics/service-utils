@@ -20,7 +20,8 @@
   "require-dev": {
     "phpunit/phpunit": "^9.5.0",
     "drupal/pathauto": "^1.6",
-    "drupal/coder": "^8.2"
+    "drupal/coder": "^8.2",
+    "phpspec/prophecy-phpunit": "^2.0"
   },
   "repositories": {
     "0": {
