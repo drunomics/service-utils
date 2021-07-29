@@ -20,6 +20,15 @@ Major version numbers match Drupal 8 core compatibility, e.g.
      9.1.x -> Drupal 9.1.x
      9.2.x -> Drupal 9.2.x
 
+## Releases
+
+After changes in a branch we need to create a new appropriate release.
+
+     8.x -> 8.8.0, 8.8.1, ...
+     9.x -> 8.9.0, 8.9.1, ...
+     9.1.x -> 9.1.0, 9.1.1, ...
+     9.2.x -> 9.2.0, 9.2.1, ...
+
 ## Scope
 
 This covers traits for services that are missing from core or contrib modules.
@@ -79,18 +88,6 @@ code beautifier:
    improve them and deprecate this package in the long term. Once those patches
    landed in new upstream releases, the service-utils usages could be replaced
    and the package can be safely dropped from a project.
-
- - Why are there no stable releases?
-
-   Because every commit can be considered a new stable version. It's generally
-   fine to always get the latest version, as every trait works independent on
-   its own and won't be touched again once added.
-   Given this library contains only simple, tested traits it's simple to avoid
-   any backward incompatible changes. This is verified by the following:
-
-    - The package version constraints make sure the version matching the right
-      core version is installed.
-    - We won't remove or change any existing traits once added.
 
  - Why is this no project on drupal.org?
 
