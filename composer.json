@@ -15,7 +15,7 @@
     "psr-4": { "drunomics\\ServiceUtils\\": "src/" }
   },
   "require": {
-    "drupal/core": "9.2.*"
+    "drupal/core": "9.3.*"
   },
   "require-dev": {
     "phpunit/phpunit": "^9.5.0",
