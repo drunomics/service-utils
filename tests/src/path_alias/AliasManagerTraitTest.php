@@ -1,13 +1,13 @@
 <?php
 
-namespace drunomics\ServiceUtils\Tests\Core\Path;
+namespace drunomics\ServiceUtils\Tests\path_alias;
 
-use drunomics\ServiceUtils\Core\Path\AliasManagerTrait;
+use drunomics\ServiceUtils\path_alias\AliasManagerTrait;
 use Drupal\Core\DependencyInjection\Container;
-use Drupal\Core\Path\AliasManagerInterface;
+use Drupal\path_alias\AliasManagerInterface;
 
 /**
- * @coversDefaultClass \drunomics\ServiceUtils\Core\Path\AliasManagerTrait
+ * @coversDefaultClass \drunomics\ServiceUtils\path_alias\AliasManagerTrait
  * @group ServiceUtils
  */
 class AliasManagerTraitTest extends \PHPUnit_Framework_TestCase {
@@ -19,7 +19,7 @@ class AliasManagerTraitTest extends \PHPUnit_Framework_TestCase {
    *
    * @var string
    */
-  protected $serviceId = 'path.alias_manager';
+  protected $serviceId = 'path_alias.manager';
 
   /**
    * @covers ::getAliasManager

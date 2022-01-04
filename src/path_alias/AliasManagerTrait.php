@@ -1,8 +1,8 @@
 <?php
 
-namespace drunomics\ServiceUtils\Core\Path;
+namespace drunomics\ServiceUtils\path_alias;
 
-use Drupal\Core\Path\AliasManagerInterface;
+use Drupal\path_alias\AliasManagerInterface;
 
 /**
  * Allows setter injection and simple usage of the service.
@@ -12,14 +12,14 @@ trait AliasManagerTrait {
   /**
    * The alias manager.
    *
-   * @var \Drupal\Core\Path\AliasManagerInterface
+   * @var \Drupal\path_alias\AliasManagerInterface
    */
   protected $aliasManager;
 
   /**
    * Sets the entity type.
    *
-   * @param \Drupal\Core\Path\AliasManagerInterface $aliasManager
+   * @param \Drupal\path_alias\AliasManagerInterface $aliasManager
    *   The alias manager.
    *
    * @return $this
@@ -32,12 +32,12 @@ trait AliasManagerTrait {
   /**
    * Gets the entity repository.
    *
-   * @return \Drupal\Core\Path\AliasManagerInterface
+   * @return \Drupal\path_alias\AliasManagerInterface
    *   The alias manager.
    */
   public function getAliasManager() {
     if (empty($this->aliasManager)) {
-      $this->aliasManager = \Drupal::service('path.alias_manager');
+      $this->aliasManager = \Drupal::service('path_alias.manager');
     }
     return $this->aliasManager;
   }
