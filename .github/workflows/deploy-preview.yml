@@ -8,7 +8,6 @@ jobs:
   deployment:
     name: Preview deployment
     runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/stage'
     steps:
       - uses: actions/checkout@v2
       - name: Check user permission
