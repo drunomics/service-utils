@@ -5,15 +5,10 @@ on:
   push:
     branches: [9.x]
 jobs:
-  deployment:
-    name: Preview deployment
+  static-analysis:
+    name: Static analysis
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - name: Check user permission
-        uses: drunomics/workflow-permission-action@1.0.0
-        with:
-          listfile: .github/workflows/deploy-allowed-users
       - name: Setup PHP
         run: |
           sudo update-alternatives --set php /usr/bin/php7.4
