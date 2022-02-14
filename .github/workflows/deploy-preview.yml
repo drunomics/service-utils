@@ -9,6 +9,7 @@ jobs:
     name: Static analysis
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v2
       - name: Setup PHP
         run: |
           sudo update-alternatives --set php /usr/bin/php7.4
