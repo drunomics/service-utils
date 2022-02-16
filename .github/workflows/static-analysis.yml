@@ -3,7 +3,10 @@ on:
   repository_dispatch:
   workflow_dispatch:
   push:
-    branches: [9.x]
+    branches:
+     - '9.**'
+  pull_request:
+    types: [opened, reopened]
 jobs:
   static-analysis:
     name: Static analysis
