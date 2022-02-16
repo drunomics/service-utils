@@ -1,4 +1,4 @@
-name: Static analysis
+name: PHPUnit and code style checks
 on:
   repository_dispatch:
   workflow_dispatch:
@@ -8,8 +8,8 @@ on:
   pull_request:
     types: [opened, reopened]
 jobs:
-  static-analysis:
-    name: Static analysis
+  PHPUnit-CodeStyle:
+    name: PHPUnit and code style checks
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
