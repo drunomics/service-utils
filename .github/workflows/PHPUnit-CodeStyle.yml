@@ -1,0 +1,36 @@
+name: PHPUnit and code style checks
+on:
+  repository_dispatch:
+  workflow_dispatch:
+  push:
+    branches:
+     - '9.**'
+  pull_request:
+    types: [opened, reopened]
+jobs:
+  PHPUnit-CodeStyle:
+    name: PHPUnit and code style checks
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Setup PHP
+        run: |
+          sudo update-alternatives --set php /usr/bin/php7.4
+      - name: "Determine composer cache directory"
+        id: "determine-composer-cache-directory"
+        run: "echo \"::set-output name=directory::$(composer config cache-dir)\""
+      - name: "Cache dependencies installed with composer"
+        uses: actions/cache@v2.1.5
+        with:
+          path: "${{ steps.determine-composer-cache-directory.outputs.directory }}"
+          key: ${{ runner.os }}-composer-v1-${{ hashFiles('./composer.json') }}
+          restore-keys: |
+            ${{ runner.os }}-composer-v1
+      - name: Install composer dependencies.
+        run: |
+          composer config platform-check false
+          composer install
+      - name: Run the PHPUnit tests and code style checks
+        run: |
+          ./vendor/bin/phpunit
+          composer cs
