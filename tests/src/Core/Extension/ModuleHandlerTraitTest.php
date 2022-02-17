@@ -10,7 +10,7 @@ use Drupal\Core\Extension\ModuleHandlerInterface;
  * @coversDefaultClass \drunomics\ServiceUtils\Core\Extension\ModuleHandlerTrait
  * @group ServiceUtils
  */
-class ModuleHandlerTraitTest extends \PHPUnit_Framework_TestCase {
+class ModuleHandlerTraitTest extends \PHPUnit\Framework\TestCase {
 
   use ModuleHandlerTrait;
 
