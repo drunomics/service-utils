@@ -4,7 +4,7 @@ namespace drunomics\ServiceUtils\Tests\Core\Language;
 
 use Drupal\Core\DependencyInjection\Container;
 use Drupal\Core\Language\LanguageManagerInterface;
-use drunomics\ServiceUtils\Core\Language\LanguageMananagerTrait;
+use drunomics\ServiceUtils\Core\Language\LanguageManagerTrait;
 use PHPUnit\Framework\TestCase;
 
 /**
