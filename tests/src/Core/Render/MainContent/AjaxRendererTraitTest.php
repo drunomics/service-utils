@@ -5,14 +5,17 @@ namespace drunomics\ServiceUtils\Tests\Core\Render\MainContent;
 use drunomics\ServiceUtils\Core\Render\MainContent\AjaxRendererTrait;
 use Drupal\Core\DependencyInjection\Container;
 use Drupal\Core\Render\MainContent\MainContentRendererInterface;
+use PHPUnit\Framework\TestCase;
+use Prophecy\PhpUnit\ProphecyTrait;
 
 /**
  * @coversDefaultClass \drunomics\ServiceUtils\Core\Render\MainContent\AjaxRendererTrait
  * @group ServiceUtils
  */
-class AjaxRendererTraitTest extends \PHPUnit_Framework_TestCase {
+class AjaxRendererTraitTest extends TestCase {
 
   use AjaxRendererTrait;
+  use ProphecyTrait;
 
   /**
    * The id of the trait's service.

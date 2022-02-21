@@ -4,22 +4,25 @@ namespace drunomics\ServiceUtils\Tests\Core\Path;
 
 use drunomics\ServiceUtils\Core\Path\AliasManagerTrait;
 use Drupal\Core\DependencyInjection\Container;
-use Drupal\Core\Path\AliasManagerInterface;
+use Drupal\path_alias\AliasManagerInterface;
+use PHPUnit\Framework\TestCase;
+use Prophecy\PhpUnit\ProphecyTrait;
 
 /**
  * @coversDefaultClass \drunomics\ServiceUtils\Core\Path\AliasManagerTrait
  * @group ServiceUtils
  */
-class AliasManagerTraitTest extends \PHPUnit_Framework_TestCase {
+class AliasManagerTraitTest extends TestCase {
 
   use AliasManagerTrait;
+  use ProphecyTrait;
 
   /**
    * The id of the trait's service.
    *
    * @var string
    */
-  protected $serviceId = 'path.alias_manager';
+  protected $serviceId = 'path_alias.manager';
 
   /**
    * @covers ::getAliasManager
@@ -36,7 +39,7 @@ class AliasManagerTraitTest extends \PHPUnit_Framework_TestCase {
    * @covers ::setAliasManager
    */
   public function testSetter() {
-    // Verify the set service is returned.
+//     Verify the set service is returned.
     $this->mockContainerWithFakeService(['calls' => 0]);
     $service = $this->prophesize()
       ->willImplement(AliasManagerInterface::class)

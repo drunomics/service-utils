@@ -2,7 +2,7 @@
 
 namespace drunomics\ServiceUtils\user;
 
-use Drupal\user\SharedTempStoreFactory;
+use Drupal\Core\TempStore\SharedTempStoreFactory;
 
 /**
  * Allows setter injection and simple usage of the service.
@@ -12,14 +12,14 @@ trait SharedTempStoreFactoryTrait {
   /**
    * Shared tempstore factory.
    *
-   * @var \Drupal\user\SharedTempStoreFactory
+   * @var \Drupal\Core\TempStore\SharedTempStoreFactory
    */
   protected $sharedTempStoreFactory;
 
   /**
    * Sets shared tempstore factory.
    *
-   * @param \Drupal\user\SharedTempStoreFactory $file_usage
+   * @param \Drupal\Core\TempStore\SharedTempStoreFactory $file_usage
    *   Shared tempstore factory.
    *
    * @return $this
@@ -32,7 +32,7 @@ trait SharedTempStoreFactoryTrait {
   /**
    * Gets shared tempstore factory.
    *
-   * @return \Drupal\user\SharedTempStoreFactory
+   * @return \Drupal\Core\TempStore\SharedTempStoreFactory
    *   Shared tempstore factory.
    */
   public function getSharedTempStoreFactory() {

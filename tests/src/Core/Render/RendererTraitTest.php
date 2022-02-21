@@ -5,14 +5,17 @@ namespace drunomics\ServiceUtils\Tests\Core\Render;
 use drunomics\ServiceUtils\Core\Render\RendererTrait;
 use Drupal\Core\DependencyInjection\Container;
 use Drupal\Core\Render\RendererInterface;
+use PHPUnit\Framework\TestCase;
+use Prophecy\PhpUnit\ProphecyTrait;
 
 /**
  * @coversDefaultClass \drunomics\ServiceUtils\Core\Render\RendererTrait
  * @group ServiceUtils
  */
-class RendererTraitTest extends \PHPUnit_Framework_TestCase {
+class RendererTraitTest extends TestCase {
 
   use RendererTrait;
+  use ProphecyTrait;
 
   /**
    * The id of the trait's service.

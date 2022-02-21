@@ -5,14 +5,17 @@ namespace drunomics\ServiceUtils\Tests\pathauto;
 use drunomics\ServiceUtils\pathauto\PathautoGeneratorTrait;
 use Drupal\Core\DependencyInjection\Container;
 use Drupal\pathauto\PathautoGeneratorInterface;
+use PHPUnit\Framework\TestCase;
+use Prophecy\PhpUnit\ProphecyTrait;
 
 /**
  * @coversDefaultClass \drunomics\ServiceUtils\pathauto\PathautoGeneratorTrait
  * @group ServiceUtils
  */
-class PathautoGeneratorTraitTest extends \PHPUnit_Framework_TestCase {
+class PathautoGeneratorTraitTest extends TestCase {
 
   use PathautoGeneratorTrait;
+  use ProphecyTrait;
 
   /**
    * The id of the trait's service.

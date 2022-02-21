@@ -5,14 +5,17 @@ namespace drunomics\ServiceUtils\Tests\Core\File;
 use drunomics\ServiceUtils\Core\File\FileSystemTrait;
 use Drupal\Core\DependencyInjection\Container;
 use Drupal\Core\File\FileSystemInterface;
+use PHPUnit\Framework\TestCase;
+use Prophecy\PhpUnit\ProphecyTrait;
 
 /**
  * @coversDefaultClass \drunomics\ServiceUtils\Core\File\FileSystemTrait
  * @group ServiceUtils
  */
-class FileSystemTraitTest extends \PHPUnit_Framework_TestCase {
+class FileSystemTraitTest extends TestCase {
 
   use FileSystemTrait;
+  use ProphecyTrait;
 
   /**
    * The id of the trait's service.

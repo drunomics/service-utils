@@ -4,15 +4,18 @@ namespace drunomics\ServiceUtils\Tests\Symfony\HttpFoundation;
 
 use drunomics\ServiceUtils\Symfony\HttpFoundation\RequestStackTrait;
 use Drupal\Core\DependencyInjection\Container;
+use Prophecy\PhpUnit\ProphecyTrait;
 use Symfony\Component\HttpFoundation\RequestStack;
+use PHPUnit\Framework\TestCase;
 
 /**
  * @coversDefaultClass \drunomics\ServiceUtils\Symfony\HttpFoundation\RequestStackTrait
  * @group ServiceUtils
  */
-class RequestStackTraitTest extends \PHPUnit_Framework_TestCase {
+class RequestStackTraitTest extends TestCase {
 
   use RequestStackTrait;
+  use ProphecyTrait;
 
   /**
    * The id of the trait's service.

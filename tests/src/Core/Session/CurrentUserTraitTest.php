@@ -5,14 +5,17 @@ namespace drunomics\ServiceUtils\Tests\Core\Session;
 use drunomics\ServiceUtils\Core\Session\CurrentUserTrait;
 use Drupal\Core\DependencyInjection\Container;
 use Drupal\Core\Session\AccountProxyInterface;
+use PHPUnit\Framework\TestCase;
+use Prophecy\PhpUnit\ProphecyTrait;
 
 /**
  * @coversDefaultClass \drunomics\ServiceUtils\Core\Session\CurrentUserTrait
  * @group ServiceUtils
  */
-class CurrentUserTraitTest extends \PHPUnit_Framework_TestCase {
+class CurrentUserTraitTest extends TestCase {
 
   use CurrentUserTrait;
+  use ProphecyTrait;
 
   /**
    * The id of the trait's service.

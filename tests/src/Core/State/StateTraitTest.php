@@ -5,14 +5,17 @@ namespace drunomics\ServiceUtils\Tests\Core\State;
 use drunomics\ServiceUtils\Core\State\StateTrait;
 use Drupal\Core\DependencyInjection\Container;
 use Drupal\Core\State\StateInterface;
+use PHPUnit\Framework\TestCase;
+use Prophecy\PhpUnit\ProphecyTrait;
 
 /**
  * @coversDefaultClass \drunomics\ServiceUtils\Core\State\StateTrait
  * @group ServiceUtils
  */
-class StateTraitTest extends \PHPUnit_Framework_TestCase {
+class StateTraitTest extends TestCase {
 
   use StateTrait;
+  use ProphecyTrait;
 
   /**
    * The id of the trait's service.

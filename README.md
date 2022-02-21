@@ -1,5 +1,5 @@
 # Service Utils
-[![Build Status](https://api.travis-ci.org/drunomics/service-utils.svg?branch=9.x)](https://travis-ci.org/drunomics/service-utils)
+[![Build Status](https://api.travis-ci.org/drunomics/service-utils.svg?branch=9.2.x)](https://travis-ci.org/drunomics/service-utils)
 (c) 2017-2021 drunomics GmbH
 
 Provides setter injection traits in order to ease dependency injection of
@@ -19,6 +19,7 @@ Major version numbers match Drupal 8 core compatibility, e.g.
      9.x -> Drupal 8.9.x
      9.1.x -> Drupal 9.1.x
      9.2.x -> Drupal 9.2.x
+     9.3.x -> Drupal 9.3.x
 
 ## Releases
 
