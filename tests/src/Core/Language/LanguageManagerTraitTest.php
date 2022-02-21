@@ -5,12 +5,13 @@ namespace drunomics\ServiceUtils\Tests\Core\Language;
 use Drupal\Core\DependencyInjection\Container;
 use Drupal\Core\Language\LanguageManagerInterface;
 use drunomics\ServiceUtils\Core\Language\LanguageMananagerTrait;
+use PHPUnit\Framework\TestCase;
 
 /**
  * @coversDefaultClass \drunomics\ServiceUtils\Core\Language\LanguageMananagerTrait
  * @group ServiceUtils
  */
-class LanguageManagerTraitTest extends \PHPUnit_Framework_TestCase {
+class LanguageManagerTraitTest extends TestCase {
 
   use LanguageManagerTrait;
 
