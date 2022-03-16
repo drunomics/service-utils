@@ -2,6 +2,7 @@
 
 namespace drunomics\ServiceUtils\Tests\Core\Extension;
 
+use PHPUnit\Framework\TestCase;
 use drunomics\ServiceUtils\Core\Extension\ModuleHandlerTrait;
 use Drupal\Core\DependencyInjection\Container;
 use Drupal\Core\Extension\ModuleHandlerInterface;
@@ -10,7 +11,7 @@ use Drupal\Core\Extension\ModuleHandlerInterface;
  * @coversDefaultClass \drunomics\ServiceUtils\Core\Extension\ModuleHandlerTrait
  * @group ServiceUtils
  */
-class ModuleHandlerTraitTest extends \PHPUnit\Framework\TestCase {
+class ModuleHandlerTraitTest extends TestCase {
 
   use ModuleHandlerTrait;
 

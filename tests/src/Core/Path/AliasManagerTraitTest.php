@@ -39,7 +39,7 @@ class AliasManagerTraitTest extends TestCase {
    * @covers ::setAliasManager
    */
   public function testSetter() {
-//     Verify the set service is returned.
+    // Verify the set service is returned.
     $this->mockContainerWithFakeService(['calls' => 0]);
     $service = $this->prophesize()
       ->willImplement(AliasManagerInterface::class)
