@@ -1,6 +1,6 @@
 <?php
 
-namespace drunomics\ServiceUtils\Core\File;
+namespace drunomics\ServiceUtils\Core\Datetime;
 
 /**
  * Allows setter injection and simple usage of the service.
