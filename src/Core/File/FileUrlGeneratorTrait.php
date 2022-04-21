@@ -2,8 +2,6 @@
 
 namespace drunomics\ServiceUtils\Core\File;
 
-use Drupal\Core\File\FileUrlGeneratorInterface;
-
 /**
  * Allows setter injection and simple usage of the service.
  */
