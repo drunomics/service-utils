@@ -5,6 +5,7 @@ namespace drunomics\ServiceUtils\Tests\Core\Datetime;
 use drunomics\ServiceUtils\Core\Datetime\DateFormatterTrait;
 use PHPUnit\Framework\TestCase;
 use Drupal\Core\DependencyInjection\Container;
+use Prophecy\PhpUnit\ProphecyTrait;
 
 /**
  * @coversDefaultClass \drunomics\ServiceUtils\Core\Datetime\DateFormatterTrait
@@ -13,6 +14,7 @@ use Drupal\Core\DependencyInjection\Container;
 class DateFormatterTraitTest extends TestCase {
 
   use DateFormatterTrait;
+  use ProphecyTrait;
 
   /**
    * The id of the trait's service.

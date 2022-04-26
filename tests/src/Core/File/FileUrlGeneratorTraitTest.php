@@ -5,6 +5,7 @@ namespace drunomics\ServiceUtils\Tests\Core\File;
 use drunomics\ServiceUtils\Core\File\FileUrlGeneratorTrait;
 use Drupal\Core\DependencyInjection\Container;
 use PHPUnit\Framework\TestCase;
+use Prophecy\PhpUnit\ProphecyTrait;
 
 /**
  * @coversDefaultClass \drunomics\ServiceUtils\Core\File\FileUrlGeneratorTrait
@@ -13,6 +14,7 @@ use PHPUnit\Framework\TestCase;
 class FileUrlGeneratorTraitTest extends TestCase {
 
   use FileUrlGeneratorTrait;
+  use ProphecyTrait;
 
   /**
    * The id of the trait's service.
