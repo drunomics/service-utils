@@ -9,7 +9,7 @@ services.
 
 ## Versions
 
-Major version numbers match Drupal 8 core compatibility, e.g.
+Major version numbers match Drupal 8 or 9 core compatibility, e.g.
 
      2.x -> Drupal 8.2.x
      3.x -> Drupal 8.3.x
@@ -22,6 +22,7 @@ Major version numbers match Drupal 8 core compatibility, e.g.
      9.1.x -> Drupal 9.1.x
      9.2.x -> Drupal 9.2.x
      9.3.x -> Drupal 9.3.x
+     9.4.x -> Drupal 9.4.x
 
 ## Releases
 
@@ -31,6 +32,8 @@ After changes in a branch we need to create a new appropriate release.
      9.x -> 8.9.0, 8.9.1, ...
      9.1.x -> 9.1.0, 9.1.1, ...
      9.2.x -> 9.2.0, 9.2.1, ...
+     9.3.x -> 9.3.0, 9.3.1, ...
+     9.4.x -> 9.4.0, 9.4.1, ...
 
 ## Scope
 
