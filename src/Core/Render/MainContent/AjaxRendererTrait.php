@@ -25,7 +25,7 @@ trait AjaxRendererTrait {
    * @return $this
    */
   public function setAjaxRenderer(MainContentRendererInterface $ajaxRenderer) {
-    $this->AjaxRenderer = $ajaxRenderer;
+    $this->ajaxRenderer = $ajaxRenderer;
     return $this;
   }
 
@@ -36,10 +36,10 @@ trait AjaxRendererTrait {
    *   The ajax renderer.
    */
   public function getAjaxRenderer() {
-    if (empty($this->AjaxRenderer)) {
-      $this->AjaxRenderer = \Drupal::service('main_content_renderer.ajax');
+    if (empty($this->ajaxRenderer)) {
+      $this->ajaxRenderer = \Drupal::service('main_content_renderer.ajax');
     }
-    return $this->AjaxRenderer;
+    return $this->ajaxRenderer;
   }
 
 }
