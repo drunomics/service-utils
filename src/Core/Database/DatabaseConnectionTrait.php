@@ -41,4 +41,5 @@ trait DatabaseConnectionTrait {
     }
     return $this->connection;
   }
+
 }
