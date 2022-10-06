@@ -36,6 +36,19 @@ class DatabaseConnectionTraitTest extends TestCase {
   }
 
   /**
+   * @covers ::setDatabaseConnection
+   */
+  public function testSetter() {
+    // Verify the set service is returned.
+    $this->mockContainerWithFakeService(['calls' => 0]);
+    $service = $this->prophesize()
+      ->willExtend(Connection::class)
+      ->reveal();
+    $this->setDatabaseConnection($service);
+    $this->assertsame($service, $this->getDatabaseConnection());
+  }
+  
+  /**
    * Helper to mock the container with a stub service.
    *
    * @param int[] $options

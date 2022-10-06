@@ -17,6 +17,19 @@ trait DatabaseConnectionTrait {
   protected $connection;
 
   /**
+   * Sets database connection.
+   *
+   * @param \Drupal\Core\Database\Connection $connection
+   *   The database connection service.
+   *
+   * @return \Drupal\Core\Database\Connection
+   */
+  public function setDatabaseConnection(Connection $connection) {
+    $this->connection = $connection;
+    return $this;
+  }
+
+  /**
    * Gets database connection service.
    *
    * @return \Drupal\Core\Database\Connection
