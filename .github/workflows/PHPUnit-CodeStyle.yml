@@ -16,7 +16,7 @@ jobs:
       - uses: actions/checkout@v2
       - name: Setup PHP
         run: |
-          sudo update-alternatives --set php /usr/bin/php7.4
+          sudo update-alternatives --set php /usr/bin/php8.1
       - name: "Determine composer cache directory"
         id: "determine-composer-cache-directory"
         run: "echo \"::set-output name=directory::$(composer config cache-dir)\""

@@ -14,14 +14,13 @@
   "autoload": {
     "psr-4": { "drunomics\\ServiceUtils\\": "src/" }
   },
-  "require": {
-    "drupal/core": "10.0.*"
-  },
+  "minimum-stability": "dev",
   "require-dev": {
     "phpunit/phpunit": "^9.5.0",
-    "drupal/pathauto": "^1.8",
+    "drupal/pathauto": "^1.11",
     "drupal/coder": "^8.3",
-    "phpspec/prophecy-phpunit": "^2.0"
+    "phpspec/prophecy-phpunit": "^2.0",
+    "drupal/core": "^10"
   },
   "repositories": {
     "0": {
@@ -33,5 +32,10 @@
     "cs": "phpcs --colors",
     "cbf": "phpcbf",
     "test": "phpunit"
+  },
+  "config": {
+    "allow-plugins": {
+      "dealerdirect/phpcodesniffer-composer-installer": true
+    }
   }
 }
