@@ -33,5 +33,10 @@
     "cs": "phpcs --colors",
     "cbf": "phpcbf",
     "test": "phpunit"
+  },
+  "config": {
+    "allow-plugins": {
+      "dealerdirect/phpcodesniffer-composer-installer": true
+    }
   }
 }
