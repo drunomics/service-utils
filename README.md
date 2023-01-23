@@ -23,6 +23,7 @@ Major version numbers match Drupal 8 or 9 core compatibility, e.g.
      9.2.x -> Drupal 9.2.x
      9.3.x -> Drupal 9.3.x
      9.4.x -> Drupal 9.4.x
+     9.5.x -> Drupal 9.5.x
 
 ## Releases
 
@@ -34,6 +35,7 @@ After changes in a branch we need to create a new appropriate release.
      9.2.x -> 9.2.0, 9.2.1, ...
      9.3.x -> 9.3.0, 9.3.1, ...
      9.4.x -> 9.4.0, 9.4.1, ...
+     9.5.x -> 9.5.0, 9.5.1, ...
 
 ## Scope
 
