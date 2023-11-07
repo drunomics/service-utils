@@ -2,19 +2,19 @@
 
 namespace drunomics\ServiceUtils\Tests\Core\Entity;
 
-use drunomics\ServiceUtils\Core\Entity\EntityRepositoryTrait;
+use drunomics\ServiceUtils\Core\Entity\EntityFieldManagerTrait;
 use Drupal\Core\DependencyInjection\Container;
-use Drupal\Core\Entity\EntityRepositoryInterface;
+use Drupal\Core\Entity\EntityFieldManagerInterface;
 use PHPUnit\Framework\TestCase;
 use Prophecy\PhpUnit\ProphecyTrait;
 
 /**
- * @coversDefaultClass \drunomics\ServiceUtils\Core\Entity\EntityRepositoryTrait
+ * @coversDefaultClass \drunomics\ServiceUtils\Core\Entity\EntityFieldManagerTrait
  * @group ServiceUtils
  */
-class EntityRepositoryTraitTest extends TestCase {
+class EntityFieldManagerTraitTest extends TestCase {
 
-  use EntityRepositoryTrait;
+  use EntityFieldManagerTrait;
   use ProphecyTrait;
 
   /**
@@ -22,30 +22,30 @@ class EntityRepositoryTraitTest extends TestCase {
    *
    * @var string
    */
-  protected $serviceId = 'entity.repository';
+  protected $serviceId = 'entity_field.manager';
 
   /**
-   * @covers ::getEntityRepository
+   * @covers ::getEntityFieldManager
    */
   public function testGetter() {
     // Verify the container is used once and the right service is returned.
     $service = $this->mockContainerWithFakeService(['calls' => 1]);
-    $this->assertsame($service, $this->getEntityRepository());
+    $this->assertsame($service, $this->getEntityFieldManager());
     // Multiple calls should fetch the service from the container only once.
-    $this->getEntityRepository();
+    $this->getEntityFieldManager();
   }
 
   /**
-   * @covers ::setEntityRepository
+   * @covers ::setEntityFieldManager
    */
   public function testSetter() {
     // Verify the set service is returned.
     $this->mockContainerWithFakeService(['calls' => 0]);
     $service = $this->prophesize()
-      ->willImplement(EntityRepositoryInterface::class)
+      ->willImplement(EntityFieldManagerInterface::class)
       ->reveal();
-    $this->setEntityRepository($service);
-    $this->assertsame($service, $this->getEntityRepository());
+    $this->setEntityFieldManager($service);
+    $this->assertsame($service, $this->getEntityFieldManager());
   }
 
   /**
