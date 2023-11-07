@@ -1,8 +1,7 @@
 # Service Utils
-(c) 2017-2022 drunomics GmbH
+(c) 2017-2023 drunomics GmbH
 
-[![PHPUnit and code style checks](https://github.com/drunomics/service-utils/actions/workflows/PHPUnit-CodeStyle.yml/badge.svg?branch=9.3.x)](https://github.com/drunomics/service-utils/actions/workflows/PHPUnit-CodeStyle.yml)
-
+[![PHPUnit and code style checks](https://github.com/drunomics/service-utils/actions/workflows/PHPUnit-CodeStyle.yml/badge.svg)](https://github.com/drunomics/service-utils/actions/workflows/PHPUnit-CodeStyle.yml)
 
 Provides setter injection traits in order to ease dependency injection of
 services.
