@@ -1,5 +1,5 @@
 # Service Utils
-(c) 2017-2023 drunomics GmbH
+(c) 2017-2025 drunomics GmbH
 
 [![PHPUnit and code style checks](https://github.com/drunomics/service-utils/actions/workflows/PHPUnit-CodeStyle.yml/badge.svg)](https://github.com/drunomics/service-utils/actions/workflows/PHPUnit-CodeStyle.yml)
 
