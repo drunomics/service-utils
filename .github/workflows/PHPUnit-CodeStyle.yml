@@ -22,7 +22,7 @@ jobs:
         id: "determine-composer-cache-directory"
         run: "echo \"::set-output name=directory::$(composer config cache-dir)\""
       - name: "Cache dependencies installed with composer"
-        uses: actions/cache@v2.1.5
+        uses: actions/cache@v3
         with:
           path: "${{ steps.determine-composer-cache-directory.outputs.directory }}"
           key: ${{ runner.os }}-composer-v1-${{ hashFiles('./composer.json') }}
