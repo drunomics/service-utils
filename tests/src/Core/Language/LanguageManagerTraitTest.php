@@ -6,6 +6,7 @@ use Drupal\Core\DependencyInjection\Container;
 use Drupal\Core\Language\LanguageManagerInterface;
 use drunomics\ServiceUtils\Core\Language\LanguageManagerTrait;
 use PHPUnit\Framework\TestCase;
+use Prophecy\PhpUnit\ProphecyTrait;
 
 /**
  * @coversDefaultClass \drunomics\ServiceUtils\Core\Language\LanguageMananagerTrait
@@ -14,6 +15,7 @@ use PHPUnit\Framework\TestCase;
 class LanguageManagerTraitTest extends TestCase {
 
   use LanguageManagerTrait;
+  use ProphecyTrait;
 
   /**
    * The id of the trait's service.

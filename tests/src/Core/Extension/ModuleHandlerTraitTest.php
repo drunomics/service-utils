@@ -6,6 +6,7 @@ use PHPUnit\Framework\TestCase;
 use drunomics\ServiceUtils\Core\Extension\ModuleHandlerTrait;
 use Drupal\Core\DependencyInjection\Container;
 use Drupal\Core\Extension\ModuleHandlerInterface;
+use Prophecy\PhpUnit\ProphecyTrait;
 
 /**
  * @coversDefaultClass \drunomics\ServiceUtils\Core\Extension\ModuleHandlerTrait
@@ -14,6 +15,7 @@ use Drupal\Core\Extension\ModuleHandlerInterface;
 class ModuleHandlerTraitTest extends TestCase {
 
   use ModuleHandlerTrait;
+  use ProphecyTrait;
 
   /**
    * The id of the trait's service.
