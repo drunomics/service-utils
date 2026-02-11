@@ -20,7 +20,7 @@
     "drupal/pathauto": "^1.11",
     "drupal/coder": "^8.3",
     "phpspec/prophecy-phpunit": "^2.0",
-    "drupal/core": "^11"
+    "drupal/core": "^11 || ^12"
   },
   "repositories": {
     "0": {
